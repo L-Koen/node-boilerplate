@@ -1,0 +1,11 @@
+services:
+  app:
+    environment:
+      - NODE_ENV=development
+    build: .
+    container_name: node-dev-container
+    command: npm run dev
+    ports:
+      - 8080:80
+    volumes:
+      - ./app:/usr/src/app
